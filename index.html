@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>CT Youth Camp 2026</title>
+
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+
+  <meta name="theme-color" content="#7c3aed">
+</head>
+
+<body>
+
+<header>
+  <h1>🏕️ CT Youth Camp 2026</h1>
+  <p>Schedule Hub</p>
+</header>
+
+
+<nav class="tabs">
+  <button onclick="showTab('full')">📋 Full Schedule</button>
+  <button onclick="showTab('daily')">📅 Daily</button>
+  <button onclick="showTab('services')">🌙 Services</button>
+  <button onclick="showTab('activities')">🎮 Activities</button>
+</nav>
+
+
+<main>
+
+<section id="full" class="tab active">
+  <h2>Full Camp Schedule</h2>
+  <div id="fullSchedule"></div>
+</section>
+
+
+<section id="daily" class="tab">
+  <h2>Daily Schedule</h2>
+
+  <div class="day-buttons">
+    <button onclick="loadDay('Sunday')">Sunday</button>
+    <button onclick="loadDay('Monday')">Monday</button>
+    <button onclick="loadDay('Tuesday')">Tuesday</button>
+    <button onclick="loadDay('Wednesday')">Wednesday</button>
+    <button onclick="loadDay('Thursday')">Thursday</button>
+    <button onclick="loadDay('Friday')">Friday</button>
+  </div>
+
+  <div id="dailySchedule"></div>
+</section>
+
+
+<section id="services" class="tab">
+  <h2>Night Services</h2>
+  <div id="serviceSchedule"></div>
+</section>
+
+
+<section id="activities" class="tab">
+  <h2>🎮 Activities</h2>
+  <div id="activitySchedule"></div>
+</section>
+
+
+</main>
+
+
+<script src="app.js"></script>
+
+<script>
+if ("serviceWorker" in navigator) {
+ navigator.serviceWorker.register("service-worker.js");
+}
+</script>
+
+
+</body>
+</html>
