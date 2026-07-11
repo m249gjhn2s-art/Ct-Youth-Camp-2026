@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f5f3ff;
+  color: #222;
+}
+
+header {
+  background: linear-gradient(135deg, #7c3aed, #ec4899);
+  color: white;
+  padding: 25px 15px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+header p {
+  margin-top: 8px;
+  font-size: 16px;
+}
+
+
+.tabs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  padding: 10px;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+
+button {
+  border: none;
+  border-radius: 12px;
+  padding: 10px;
+  background: #7c3aed;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+button:hover {
+  opacity: .85;
+}
+
+
+main {
+  padding: 15px;
+}
+
+
+.tab {
+  display: none;
+}
+
+.tab.active {
+  display: block;
+}
+
+
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 15px;
+  margin-bottom: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,.1);
+}
+
+
+.card h3 {
+  margin-top: 0;
+  color: #7c3aed;
+}
+
+
+.time {
+  font-weight: bold;
+  color: #ec4899;
+}
+
+
+.day-buttons {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+
+.activity {
+  border-left: 6px solid #f59e0b;
+}
+
+
+.service {
+  border-left: 6px solid #10b981;
+}
+
+
+@media(max-width:600px){
+
+.tabs {
+  grid-template-columns: repeat(2,1fr);
+}
+
+button {
+  font-size: 13px;
+}
+
+}
